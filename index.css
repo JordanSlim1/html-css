@@ -1,0 +1,87 @@
+img {
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    width: 30%;
+}
+
+body{
+    background-color: mediumpurple;
+}
+
+hgroup{
+    text-align: center;
+    color:black;
+}
+
+p{
+    width: 100px;
+    padding: 10px;
+    border: 5px;
+}
+
+.intro{
+    padding: 5px;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+    margin: auto;
+    width: 350px;
+    height: auto;
+    background-color:dimgrey;
+    color: white;
+    font-size: 20px;
+    margin-left: 66%;
+    margin-top: 5%;
+}
+
+.container{
+    width: 600px;
+    height: auto;
+}
+
+.container img{
+    align-self: center;
+    float: left;
+    margin-top: 10%;
+    margin-left: 30%;
+    width: 40%
+}
+
+#hobbies{
+    margin-top: 2%;
+    width: 350px;
+    background-color: white;
+    color: black;
+    border: 3px;
+    border-color: black;
+    border-style: solid;
+}
+
+/*Navbar at bottom, setting color (W3School help)*/
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+  }
+  
+  /*Style links inside nav bar (W3School help)*/
+  .navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /*Change color when hovered over link (W3School help)*/
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
