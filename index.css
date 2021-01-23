@@ -1,87 +1,76 @@
-img {
-    margin-left: auto;
-    margin-right: auto;
-    border: 3px;
-    border-style: solid;
-    border-color: black;
-    width: 30%;
+.parent {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1.5fr 0.8fr;
+    grid-template-areas: "navbar navbar navbar navbar" "photo main main main" "photo content content content" "head head head head";
+    grid-gap: 0.2rem;
 }
 
-body{
-    background-color: mediumpurple;
-}
-
-hgroup{
-    text-align: center;
-    color:black;
-}
-
-p{
-    width: 100px;
-    padding: 10px;
-    border: 5px;
-}
-
-.intro{
-    padding: 5px;
-    border: 3px;
-    border-color: black;
-    border-style: solid;
-    margin: auto;
-    width: 350px;
-    height: auto;
-    background-color:dimgrey;
-    color: white;
-    font-size: 20px;
-    margin-left: 66%;
-    margin-top: 5%;
-}
-
-.container{
-    width: 600px;
-    height: auto;
-}
-
-.container img{
-    align-self: center;
-    float: left;
-    margin-top: 10%;
-    margin-left: 30%;
-    width: 40%
-}
-
-#hobbies{
-    margin-top: 2%;
-    width: 350px;
-    background-color: white;
-    color: black;
-    border: 3px;
-    border-color: black;
-    border-style: solid;
-}
-
-/*Navbar at bottom, setting color (W3School help)*/
 .navbar {
-    background-color: #333;
-    overflow: hidden;
-    position: fixed;
-    bottom: 0;
-  }
-  
-  /*Style links inside nav bar (W3School help)*/
-  .navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
+    background-color: yellow;
+    grid-area: navbar;
+}
+
+.head {
+    background-color: tomato;
+    grid-area: head;
+    font-size: 1rem;
+}
+
+.photo {
+    background-color: turquoise;
+    grid-area: photo;
+    display: flex;
+}
+
+.photo img{
+    margin: auto;
+    width: 30%;
+    height: auto;
+}
+
+.main {
+    background-color: yellow;
+    grid-area: main;
+    font-size: 1rem;
+    color: purple;
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /*Change color when hovered over link (W3School help)*/
-  .navbar a:hover {
-    background-color: #ddd;
+}
+
+.content {
+    background-color: blue;
+    grid-area: content;
+    font-size: 1.5rem;
     color: black;
-  }
-  
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr .3fr .8fr .4fr .4fr;
+        grid-template-areas: "navbar" "head" "photo" "main" "content";
+    } 
+}
+
+.navbar {
+    overflow: hidden;
+    display: block;
+}
+
+.navbar a {
+    float: left;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+    font-size: 1rem;
+}
