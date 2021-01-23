@@ -1,0 +1,53 @@
+.parent {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr .5fr 1fr;
+    grid-template-areas: "navbar navbar navbar navbar navbar navbar" "head head head head head head" "photo1 photo1 photo1 photo1 photo1 photo1" "photo2 photo2 photo2 photo2 photo2 photo2" "photo3 photo3 photo3 photo3 photo3 photo3" ;
+    grid-gap: 0.2rem;
+}
+
+.navbar {
+    background-color: yellow;
+    grid-area: navbar;
+}
+
+.head {
+    background-color: tomato;
+    grid-area: head;
+}
+
+.photo1 {
+    background-color: turquoise;
+}
+
+.photo2 {
+    background-color:blueviolet;
+}
+
+.photo3 {
+    background-color:blue;
+}
+
+@media screen and (max-width: 1200px) {
+    .parent {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr .3fr .8fr .4fr .4fr;
+        grid-template-areas: "navbar" "head" "photo" "main" "content";
+    } 
+}
+
+.navbar {
+    overflow: hidden;
+    display: block;
+}
+
+.navbar a {
+    float: left;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+    font-size: 1rem;
+}
