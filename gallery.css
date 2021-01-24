@@ -1,10 +1,9 @@
 .parent {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.2fr .5fr 1fr;
-    grid-template-areas: "navbar navbar navbar navbar navbar navbar" "head head head head head head" "photo1 photo1 photo1 photo1 photo1 photo1" "photo2 photo2 photo2 photo2 photo2 photo2" "photo3 photo3 photo3 photo3 photo3 photo3" ;
-    grid-gap: 0.2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .1fr .2fr 1fr;
+    grid-template-areas: "navbar navbar navbar navbar navbar" "head head head head head" "photo1 photo2 photo3 photo4 photo5";
 }
 
 .navbar {
@@ -19,22 +18,70 @@
 
 .photo1 {
     background-color: turquoise;
+    grid-area: photo1;
+    display: flex;
+}
+
+.photo1 img {
+    margin: auto;
+    height: auto;
+    width: 40%;
 }
 
 .photo2 {
-    background-color:blueviolet;
+    background-color: blueviolet;
+    grid-area: photo2;
+    display: flex;
+}
+
+.photo2 img {
+    margin: auto;
+    height: auto;
+    width: 40%;
 }
 
 .photo3 {
-    background-color:blue;
+    background-color: blue;
+    grid-area: photo3;
+    display: flex;
+}
+
+.photo3 img {
+    margin: auto;
+    height: auto;
+    width: 40%;
+}
+
+.photo4 {
+    background-color: khaki;
+    grid-area: photo4;
+    display: flex;
+}
+
+.photo4 img {
+    margin: auto;
+    height: auto;
+    width: 40%;
+}
+
+.photo5 {
+    background-color: lavenderblush;
+    grid-area: photo5;
+    display: flex;
+}
+
+.photo5 img {
+    margin: auto;
+    height: auto;
+    width: 40%;
 }
 
 @media screen and (max-width: 1200px) {
     .parent {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr .3fr .8fr .4fr .4fr;
-        grid-template-areas: "navbar" "head" "photo" "main" "content";
-    } 
+        grid-template-rows: .2fr .3fr .3fr .3fr .3fr .3fr .3fr;
+        grid-template-areas: "navbar" "head" "photo1" "photo2" "photo3" "photo4" "photo5";
+    }
 }
 
 .navbar {
