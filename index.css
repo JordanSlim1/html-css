@@ -37,14 +37,14 @@
     color: purple;
     width: 100%;
     height: auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     text-align: center;
 }
 
 .content {
     background-color: blue;
     grid-area: content;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: black;
     width: 100%;
     height: auto;
@@ -55,7 +55,8 @@
 @media screen and (max-width: 1200px) {
     .parent {
         grid-template-columns: 1fr;
-        grid-template-rows: 0.2fr .3fr .8fr .4fr .4fr;
+        height: 100vh;
+        grid-template-rows: 0.3fr .3fr .7fr .3fr .3fr;
         grid-template-areas: "navbar" "head" "photo" "main" "content";
     } 
 }
