@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css" type="text/css">
     <title>Contact</title>
 </head>
-<body>
-    
+
+<body style="font-family: sans-serif;">
+    <div class="parent">
+        <div class="head">
+            <hgroup>
+                <h1>Contact Page</h1>
+                <h3>You can contact me by email</h3>
+            </hgroup>
+        </div>
+        <hr>
+        <div class="main">
+            Name:
+            <input type = "text"
+                 id = "myText"
+                 value = "" />
+            <br><br>
+            Email:
+            <input type = "text"
+                 id = "email"
+                 value = "" />
+            <br><br>
+            Descritpion:<br><br>
+            <textarea id = "myDesc" value = "" rows="5" cols="50">Enter your issue here</textarea>
+            <button value="Submit">Submit</button>
+        </div>
+        <div class="navbar">
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html"> Contact</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
 </body>
+
 </html>

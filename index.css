@@ -1,0 +1,77 @@
+.parent {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1.5fr 0.8fr;
+    grid-template-areas: "navbar navbar navbar navbar" "photo main main main" "photo content content content" "head head head head";
+    grid-gap: 0.2rem;
+}
+
+.navbar {
+    background-color: yellow;
+    grid-area: navbar;
+}
+
+.head {
+    background-color: tomato;
+    grid-area: head;
+    font-size: 1rem;
+}
+
+.photo {
+    background-color: turquoise;
+    grid-area: photo;
+    display: flex;
+}
+
+.photo img{
+    margin: auto;
+    width: 30%;
+    height: auto;
+}
+
+.main {
+    background-color: yellow;
+    grid-area: main;
+    font-size: 1rem;
+    color: purple;
+    width: 100%;
+    height: auto;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.content {
+    background-color: blue;
+    grid-area: content;
+    font-size: 1.2rem;
+    color: black;
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    .parent {
+        grid-template-columns: 1fr;
+        height: 100vh;
+        grid-template-rows: 0.3fr .3fr .7fr .3fr .3fr;
+        grid-template-areas: "navbar" "head" "photo" "main" "content";
+    } 
+}
+
+.navbar {
+    overflow: hidden;
+    display: block;
+}
+
+.navbar a {
+    float: left;
+    display: inline;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    text-decoration: none;
+    font-size: 1rem;
+}
